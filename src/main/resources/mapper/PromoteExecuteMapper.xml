@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.droolsBoot.dao.PromoteExecuteDao">
+<resultMap id="BaseResultMap" type="com.droolsBoot.model.PromoteExecute">
+    <result column="promote_code" property="promoteCode" jdbcType="VARCHAR"/>
+    <result column="promote_rule" property="WorkContent" jdbcType="VARCHAR"/>
+    <result column="promote_name" property="promoteName" jdbcType="VARCHAR"/>
+</resultMap>
+
+<insert id="insertPromoteExecute" parameterType="com.droolsBoot.model.PromoteExecute">
+    insert into promote_rule(
+    promote_code,
+    promote_rule,
+    promote_name
+    )
+    values
+    (
+    #{promoteCode},
+    #{WorkContent},
+    #{promoteName}
+    )
+</insert>
+</mapper>
